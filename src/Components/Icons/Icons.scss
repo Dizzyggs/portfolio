@@ -1,0 +1,14 @@
+svg {
+  cursor: pointer;
+}
+
+.btn {
+  display: flex;
+  border-radius: 50%;
+  padding: 5px 5px;
+  transition: all 0.35s;
+}
+
+.btn:hover {
+  background-color: rgb(34, 34, 34);
+}

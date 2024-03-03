@@ -1,0 +1,143 @@
+h1, p {
+  color: white;
+  margin: 0;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+.greetings {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.greetings-text {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-right: 0;
+  p {
+    color: gray;
+  }
+}
+
+.socials {
+  display: flex;
+  flex-direction: row;
+  margin-top: 1rem;
+  margin-left: -8px;
+  svg {
+    gap: 10px;
+  }
+}
+
+.techstack {
+  display: flex;
+  flex-direction: row;
+  margin-left: -8px;
+}
+
+.container-full {
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+
+.animated-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #282c34, #00f0b3, #282c34);
+  animation: gradientAnimation 10s ease infinite;
+  filter: blur(20px);
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@media only screen and (max-width: 915px) {
+  .container-narrow {
+    width: 100%;
+    padding-top: 30%;
+  }
+} 
+
+@media only screen and (min-width: 920px) {
+  h1 {
+    font-size: 3.5rem;
+  }
+  .greetings {
+    justify-content: space-between;
+    flex-direction: row;
+  }
+  .greetings-text {
+    max-width: 600px;
+    margin-right: 10rem;
+  }
+}
+
+.content {
+  width: 100%;
+  // height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.content {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.content::-webkit-scrollbar { 
+  display: none;
+}
+
+.hidden {
+  opacity: 0;
+  transition: all 1s;
+}
+
+.show {
+  opacity: 1;
+}
+
+.wave {
+  animation-name: wave-animation;
+  animation-duration: 2.5s;
+  animation-iteration-count: 4;
+  transform-origin: 70% 70%;
+  display: inline-block;
+}
+
+.selfie1 {
+  width: 250px;
+  border-radius: 35px;
+  height: auto;
+}
+
+@keyframes wave-animation {
+  0% { transform: rotate( 0.0deg) }
+ 10% { transform: rotate(14.0deg) }
+ 20% { transform: rotate(-8.0deg) }
+ 30% { transform: rotate(14.0deg) }
+ 40% { transform: rotate(-4.0deg) }
+ 50% { transform: rotate(10.0deg) }
+ 60% { transform: rotate( 0.0deg) }
+100% { transform: rotate( 0.0deg) }
+}
